@@ -24,6 +24,15 @@ class Piece {
 	public void move(Position p){
 		position = p;
 	}
+	
+	public Position position(){
+	        return position;    
+	}
+	
+	public Boolean team(){
+		return team;
+	}
+	
     
 
 }
