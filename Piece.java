@@ -16,7 +16,7 @@ class Piece {
 	}
 
 	public void removeFromGrid(){
-		position = new Position(-1, -1);
+		position = new Position(-1, -9);
 	}
 
 	public void move(Position p){
