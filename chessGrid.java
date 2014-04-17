@@ -18,13 +18,13 @@ public class chessGrid extends JFrame implements MouseListener{
     // layeredPane.addMouseMotionListener(this);
     JButton teamW = new JButton("White");
     teamW.setBackground(Color.red);
-    teamW.setBounds (625,600,75,50);
-    teamW.setVisible(true);
+    teamW.setBounds (700,625,75,50);
+   
 
     JButton teamB = new JButton("Black");
     teamB.setBackground(Color.black);
-    teamB.setBounds (625,600,75,50);
-    teamB.setVisible(true);
+    teamB.setBounds (600,625,75,50);
+   
 
     // TextField winLossCounter = new JTextField("Win" +w+ "loss" +l+);
     // win
