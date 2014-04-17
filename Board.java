@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Board {
+class Board {
 	ArrayList<Piece> pieces = new ArrayList<Piece>();
 	ArrayList<Piece> kings = new ArrayList<Piece>();
 	ArrayList<Position> exclude = new ArrayList<Position>();
@@ -46,7 +46,19 @@ public class Board {
 			}
 		}
 		return true; 	
+	}
+
+	public boolean removeFromGird(Position p){
+		Piece kill = getPiece(p);
+		if (kill == null) {
+			return false;
+		}
+		if (kill == kings.get(0) || kill == kings.get(1)) {
+			win(!kill.team());
+		}
+		pieces.remove(pieces.indexOf(kill));
+		return true;
 
 
-	}	
+	}
 }
