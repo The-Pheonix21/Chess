@@ -3,7 +3,7 @@ import java.awt.*;
 class Piece {
 	Position position;
 	Boolean team;
-	Board board
+	Board board;
 
     public Piece(Board b, Boolean t, Position p){
         team = t;
