@@ -11,7 +11,7 @@ class Pawn extends Piece{
             	if (temp.x() == position.x() && super.board.getPiece(temp) == null) {
             		d.add(temp);
             	}
-            	if(super.board.getPiece() != null && super.board.getPiece().team() == !super.team()){
+            	if(super.board.getPiece(temp) != null && super.board.getPiece(temp).team() == !super.team()){
             		d.add(temp);
             	}
             }
