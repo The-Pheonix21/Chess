@@ -10,6 +10,11 @@ class Rook extends Piece {
 	        for (int i = 0; i; i++) {
 	        	check.clear();
 	        	check.add(super.position);
+	        	Position temp = new Position();
+	        	check.add(temp);
+	        	if () {
+	        		
+	        	}
 	        }
 	        return d;
 	    }
