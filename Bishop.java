@@ -13,6 +13,7 @@ class Bishop extends Piece {
 	        	if (temp.x() >=  && temp.x()<= && temp.y() >=   && temp.y()<=) {
 	        		
 	        	}
+	        }
 	        return d;
 	    }
 
