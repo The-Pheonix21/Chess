@@ -1,24 +1,76 @@
- import javax.swing.JFrame;
- import javax.swing.JButton;
- import java.awt.GridLayout; 
-     public class chessGrid {  
-       JFrame frame=new JFrame();
-       JButton[][] grid; //names the grid of buttons
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-       public chessGrid(int width, int length){ //constructor
-               frame.setLayout(new GridLayout(width,length)); //set layout
-               grid=new JButton[width][length]; //allocate the size of grid
-               for(int y=0; y<length; y++){
-                       for(int x=0; x<width; x++){
-                               grid[x][y]=new JButton("("+x+","+y+")"); //creates new button    
-                               frame.add(grid[x][y]); //adds button to grid
-                       }
-               }
-               frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-               frame.pack(); //sets appropriate size for frame
-               frame.setVisible(true); //makes frame visible
-       }
-       public static void main(String[] args) {
-               new chessGrid(8,8);//makes new ButtonGrid with 2 parameters
-       }
-      }
+public class chessGrid extends JFrame implements MouseListener
+ {
+    JLayeredPane layeredPane;
+    JPanel chessBoard;
+
+    public chessGrid(String title)
+    {
+    super(title);
+    Dimension boardSize = new Dimension(600, 600);
+    Dimension boardwButton = new Dimension(600,700);
+
+    layeredPane = new JLayeredPane();
+    getContentPane().add(layeredPane);
+    layeredPane.setPreferredSize(boardwButton);
+    layeredPane.addMouseListener(this);
+    // layeredPane.addMouseMotionListener(this);
+    JButton surrender = new JButton("Surrender");
+    surrender.setBackground(Color.red);
+    surrender.setBounds(50,625,100,50);
+    surrender.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e)
+    {
+        System.exit(0);
+    }
+    });
+    layeredPane.add(surrender, new Integer(1));
+    chessBoard = new JPanel();
+    layeredPane.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
+    chessBoard.setLayout( new GridLayout(8, 8) );
+    chessBoard.setPreferredSize( boardSize );
+    chessBoard.setBounds(0, 0, boardSize.width, boardSize.height);
+    JButton [] square = new JButton[64];
+     for (int i = 0; i < 64; i++) {
+      square[i]=new JButton("");
+     chessBoard.add( square[i] );
+      int row = (i / 8) % 2;
+      if (row == 0) 
+       square[i].setBackground( i % 2 == 0 ? Color.black : Color.white );
+     else
+       square[i].setBackground( i % 2 == 0 ? Color.white : Color.black );
+    }
+  }
+     public void mousePressed(MouseEvent e)
+     {
+       
+     }
+   
+ 
+     
+     public void mouseReleased(MouseEvent e) {
+       
+     }
+     public void mouseClicked(MouseEvent e) {
+  
+     }
+   //  public void mouseMoved(MouseEvent e) {
+   // }
+     public void mouseEntered(MouseEvent e){
+  
+     }
+     public void mouseExited(MouseEvent e) {
+  
+     }
+    public static void main(String[] args) {
+        JFrame frame = new chessGrid("Chess Board");
+        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE );
+        frame.pack();
+        frame.setResizable(true);
+        frame.setLocationRelativeTo( null );
+        frame.setVisible(true);
+     }
+}
