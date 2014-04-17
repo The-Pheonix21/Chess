@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Rook extends Piece {
 	
 	public Rook(){
