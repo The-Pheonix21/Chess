@@ -3,10 +3,12 @@ import java.awt.*;
 class Piece {
 	Position position;
 	Boolean team;
+	Board board;
 
-    public Piece(Boolean t, Position p){
+    public Piece(Board b, Boolean t, Position p){
         team = t;
         position = p;
+        board = b;
     }
 
 	public ArrayList<Position> possibleMoves(){
@@ -16,12 +18,21 @@ class Piece {
 	}
 
 	public void removeFromGrid(){
-		position = new Position(-1, -1);
+		position = new Position(-1, -9);
 	}
 
 	public void move(Position p){
 		position = p;
 	}
+	
+	public Position position(){
+	        return position;    
+	}
+	
+	public Boolean team(){
+		return team;
+	}
+	
     
 
 }
