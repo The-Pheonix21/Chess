@@ -16,6 +16,6 @@ class Pawn extends Piece{
             	}
             }
         }
-        return ;
+        return d;
 	}
 }
