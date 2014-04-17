@@ -7,7 +7,7 @@ class Bishop extends Piece {
 		public ArrayList<Position> possibleMoves(){
 	        ArrayList<Position> d = new ArrayList<Position>();
 	        ArrayList<Position> check = new ArrayList<Position>();
-	        for (int i = 0; i; i++) {
+	        for (int i = ; i; i++) {
 	        	check.clear();
 	        	check.add(super.position);
 	        	Position temp = new Position();
