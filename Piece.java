@@ -32,6 +32,10 @@ class Piece {
 	public Boolean team(){
 		return team;
 	}
+
+	public Board board() {
+		return board;
+	}
 	
     
 

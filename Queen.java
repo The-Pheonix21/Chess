@@ -10,14 +10,14 @@ class Queen extends Piece {
         	for (int j = -1; j <= 1; j++) {
         		int scalar = 1;
                         // Position position = new Position(super.position().x(), super.position().y());
-        		while (super.position.x() + (i * scalar) <= 8 && super.position.y() + (j * scalar) <= 8 && super.position.x() + (i * scalar) >= 0 && super.position.y() + (j * scalar) >= 0 ) {
+        		while (super.position().x() + (i * scalar) <= 8 && super.position().y() + (j * scalar) <= 8 && super.position().x() + (i * scalar) >= 0 && super.position().y() + (j * scalar) >= 0 && super.getPiece(new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar))) == null) {
         		      if (super.board.checkCheck(d, super.team()))
-        		              d.add(new Position(super.position.x() + (i * scalar), super.position.y() + (j * scalar)));
+        		              d.add(new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar)));
                               scalar++;
                         }
         	}
         }
-        d.add(super.position);
+        d.add(super.position());
         return d;
 	}
 
