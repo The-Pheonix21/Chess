@@ -4,7 +4,7 @@ class Piece {
 	Position position;
 	Boolean team;
 	Board board;
-
+	ArrayList<Position> check = new ArrayList<position>();
     public Piece(Board b, Boolean t, Position p){
         team = t;
         position = p;
@@ -21,14 +21,22 @@ class Piece {
 		position = new Position(-1, -9);
 	}
 
-	public void move(Position p){
-		position = p;
+	public Boolean move(Position p){
+		check.clear();
+		check.add(position());
+		check.add(p);
+		if (board.checkCheck(check)) {
+			board.removeFromGird(p);
+			position = p;
+			return true;			
+		}
+		return false;
 	}
-	
+
 	public Position position(){
 	        return position;    
 	}
-	
+
 	public Boolean team(){
 		return team;
 	}
@@ -36,7 +44,7 @@ class Piece {
 	public Board board() {
 		return board;
 	}
-	
+
     
 
 }
