@@ -15,6 +15,9 @@ class Queen extends Piece {
         		              d.add(new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar)));
                               scalar++;
                         }
+                        if (super.getPiece(new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar))) != null) {
+                           d.add(new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar)));     
+                        }
         	}
         }
         d.add(super.position());
