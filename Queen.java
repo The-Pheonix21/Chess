@@ -21,7 +21,7 @@ class Queen extends Piece {
         		              d.add(position);
                               scalar++;
                         }
-                        if (super.getPiece(position) != null) {
+                        if (super.getPiece(position) != null && super.getPiece(position).team() == !super.team()) {
                            d.add(position);     
                         }
                         c.remove(1);

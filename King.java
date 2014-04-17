@@ -13,9 +13,10 @@ class King extends Piece {
         c.add(super.position());
         for (int i = -1; i <= 1; i++) {
         	for (int j = -1; j <= 1; j++) {
-                        c.add(new Position(super.position().x() + i, super.position().y() + j));
-        		if (position().x() + i <= 8 && position().y() + j <= 8 && super.board.checkCheck(c, super.team()) && position.x() + i >= 0 && position.y() + j >= 0)
-        			d.add(new Position(super.position().x() + i, super.position().y() + j));
+                        Postion p = new Position(super.position().x() + i, super.position().y() + j);
+                        c.add(position);
+        		if (position().x() + i <= 8 && position().y() + j <= 8  && position.x() + i >= 0 && position.y() + j >= 0 && (super.board.getPiece(position) == null || super.board.getPiece(position).team() == !super.team()))
+        			d.add(position);
                         c.remove(1);
         	}
         }
