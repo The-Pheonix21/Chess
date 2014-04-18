@@ -8,8 +8,8 @@ class Rook extends Piece {
 
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
-        for (int i = 0; i>8; i++) {
-        	Position temp = new Position(super.position.x()+1, super.position.y()+1);
+        for (int i = 1; i<9; i++) {
+        	Position temp = new Position(super.position.x()+i, super.position.y());
         	if (super.board.getPiece(temp)!=null) {
 	        	if (super.board.getPiece(temp).team()!=super.team()) {
 	        		d.add(temp);
@@ -20,8 +20,8 @@ class Rook extends Piece {
         	}
         	d.add(temp);
         }
-        for (int i = 0; i>8; i++) {
-        	Position temp = new Position(super.position.x()+1, super.position.y()-1);
+        for (int i = 1; i<9; i++) {
+        	Position temp = new Position(super.position.x()-i, super.position.y());
         	if (super.board.getPiece(temp)!=null) {
 	        	if (super.board.getPiece(temp).team()!=super.team()) {
 	        		d.add(temp);
@@ -32,8 +32,8 @@ class Rook extends Piece {
         	}
         	d.add(temp);
         }
-        for (int i = 0; i>8; i++) {
-        	Position temp = new Position(super.position.x()-1, super.position.y()+1);
+        for (int i = 1; i<9; i++) {
+        	Position temp = new Position(super.position.x(), super.position.y()+i);
         	if (super.board.getPiece(temp)!=null) {
 	        	if (super.board.getPiece(temp).team()!=super.team()) {
 	        		d.add(temp);
@@ -44,8 +44,8 @@ class Rook extends Piece {
         	}
         	d.add(temp);
         }
-        for (int i = 0; i>8; i++) {
-        	Position temp = new Position(super.position.x()-1, super.position.y()-1);
+        for (int i = 1; i<9; i++) {
+        	Position temp = new Position(super.position.x(), super.position.y()-i);
         	if (super.board.getPiece(temp)!=null) {
 	        	if (super.board.getPiece(temp).team()!=super.team()) {
 	        		d.add(temp);
