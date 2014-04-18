@@ -58,5 +58,4 @@ class Bishop extends Piece {
         }
         return d;
     }
-
 }
