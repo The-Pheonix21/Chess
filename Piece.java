@@ -19,6 +19,7 @@ class Piece {
         team = t;
         position = p;
         board = b;
+        board.addToGrid(this);
     }
 
     public Piece(Board b, Boolean t, Position p, Image i){
