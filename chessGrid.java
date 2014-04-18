@@ -2,13 +2,11 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class chessGrid extends JFrame implements MouseListener
- {
+public class chessGrid extends JFrame implements MouseListener{
     JLayeredPane layeredPane;
     JPanel chessBoard;
 
-    public chessGrid(String title)
-    {
+    public chessGrid(String title){
     super(title);
     Dimension boardSize = new Dimension(600, 600);
     Dimension boardwButton = new Dimension(600,700);
@@ -18,12 +16,23 @@ public class chessGrid extends JFrame implements MouseListener
     layeredPane.setPreferredSize(boardwButton);
     layeredPane.addMouseListener(this);
     // layeredPane.addMouseMotionListener(this);
+    JButton teamW = new JButton("White");
+    teamW.setBackground(Color.red);
+    teamW.setBounds (700,625,75,50);
+   
+
+    JButton teamB = new JButton("Black");
+    teamB.setBackground(Color.black);
+    teamB.setBounds (600,625,75,50);
+   
+
+    // TextField winLossCounter = new JTextField("Win" +w+ "loss" +l+);
+    // win
     JButton surrender = new JButton("Surrender");
     surrender.setBackground(Color.red);
     surrender.setBounds(50,625,100,50);
     surrender.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent e)
-    {
+    public void actionPerformed(ActionEvent e){
         System.exit(0);
     }
     });
@@ -44,21 +53,15 @@ public class chessGrid extends JFrame implements MouseListener
        square[i].setBackground( i % 2 == 0 ? Color.white : Color.black );
     }
   }
-     public void mousePressed(MouseEvent e)
-     {
-       
+     public void mousePressed(MouseEvent e){
+
      }
-   
- 
-     
      public void mouseReleased(MouseEvent e) {
        
      }
      public void mouseClicked(MouseEvent e) {
   
      }
-   //  public void mouseMoved(MouseEvent e) {
-   // }
      public void mouseEntered(MouseEvent e){
   
      }
