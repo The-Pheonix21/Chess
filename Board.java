@@ -61,4 +61,11 @@ class Board {
 
 
 	}
+	
+	public void addToGrid(Piece p){
+		pieces.add(p);
+		if (kings.size() < 2) {
+			kings.add(p);
+		}
+	}
 }
