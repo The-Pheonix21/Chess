@@ -8,7 +8,6 @@ class King extends Piece {
 
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
-        ArrayList<Position> c = new ArrayList<Position>();
         d.add(super.position());
         for (int i = -1; i <= 1; i++) {
         	for (int j = -1; j <= 1; j++) {
