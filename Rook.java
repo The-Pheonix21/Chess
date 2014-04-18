@@ -1,10 +1,6 @@
 import java.util.ArrayList;
 
 class Rook extends Piece {
-	
-	public Rook(){
-
-	}
 
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
