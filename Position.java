@@ -25,7 +25,9 @@ class Position {
 	}
 
 	public boolean equals(Position p) {
-		return p.x() = this.x && p.y() == this.y;
+		if(p.x() = this.x && p.y() == this.y)
+		    return true;
+		return false;
 	}
 
 }
