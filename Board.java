@@ -54,7 +54,7 @@ class Board {
 			return false;
 		}
 		if (kill == kings.get(0) || kill == kings.get(1)) {
-			win(!(kill.team()));
+			//win(!(kill.team()));
 		}
 		pieces.remove(pieces.indexOf(kill));
 		return true;
