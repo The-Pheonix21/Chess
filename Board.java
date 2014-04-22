@@ -7,7 +7,7 @@ class Board {
 
 	public Piece getPiece(Position p){
 		boolean returnPiece;
-		for (Piece pi : p) {
+		for (Piece pi : pieces) {
 			returnPiece = true;
 			if(pi.position().equals(p)){
 				for (int i = 0; i<exclude.size(); i++) {
