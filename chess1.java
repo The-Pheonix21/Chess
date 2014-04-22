@@ -11,6 +11,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
     int yAdjustment;
     Position oldpos;
     Board board;
+    Boolean turn = true;
     public chess1(String title)
     {
     board = new Board();
@@ -164,17 +165,19 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
 
     public void mousePressed(MouseEvent e)
     {
-        chessPiece = null;
-        Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
-         if (c instanceof JPanel) 
-         return;
-         Point parentLocation = c.getParent().getLocation();
-        xAdjustment = parentLocation.x - e.getX();
-        yAdjustment = parentLocation.y - e.getY();
-        chessPiece = (JLabel)c;
-        chessPiece.setLocation(e.getX() + xAdjustment, e.getY() + yAdjustment);
-        chessPiece.setSize(chessPiece.getWidth(), chessPiece.getHeight());
-        layeredPane.add(chessPiece, JLayeredPane.DRAG_LAYER);
+        if () {
+              chessPiece = null;
+            Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
+             if (c instanceof JPanel) 
+             return;
+             Point parentLocation = c.getParent().getLocation();
+            xAdjustment = parentLocation.x - e.getX();
+            yAdjustment = parentLocation.y - e.getY();
+            chessPiece = (JLabel)c;
+            chessPiece.setLocation(e.getX() + xAdjustment, e.getY() + yAdjustment);
+            chessPiece.setSize(chessPiece.getWidth(), chessPiece.getHeight());
+            layeredPane.add(chessPiece, JLayeredPane.DRAG_LAYER);  
+            }
     }
    
     public void mouseDragged(MouseEvent me) {
@@ -207,6 +210,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
             }
             chessPiece.setVisible(true);
         }
+        if(chessPiece == null) return;
     }
     public void mouseClicked(MouseEvent e) {
   
