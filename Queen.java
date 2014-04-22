@@ -12,7 +12,7 @@ class Queen extends Piece {
         	for (int j = -1; j <= 1; j++) {
         		int scalar = 1;
                 Position position = new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar));
-        		while (super.position().x() + (i * scalar) <= 8 && super.position().y() + (j * scalar) <= 8 && super.position().x() + (i * scalar) >= 0 && super.position().y() + (j * scalar) >= 0 && super.getPiece(position) == null) {
+        		while (super.position().x() + (i * scalar) <= 8 && super.position().y() + (j * scalar) <= 8 && super.position().x() + (i * scalar) >= 0 && super.position().y() + (j * scalar) >= 0 && super.board.getPiece(position) == null) {
         		      d.add(position);
                               scalar++;
                         }
