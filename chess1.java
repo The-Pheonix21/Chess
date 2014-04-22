@@ -194,7 +194,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
                 brat = true;
             }
         }
-        if (brat && board.getPiece(peanut(me.getX(), me.getY())).moves()) {
+        if (brat && board.getPiece(peanut(me.getX(), me.getY())).move()) {
             if(chessPiece == null) return;
 
              chessPiece.setVisible(false);
