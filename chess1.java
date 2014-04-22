@@ -9,6 +9,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
     JLabel chessPiece;
     int xAdjustment;
     int yAdjustment;
+    Position oldpos;
     public chess1(String title)
     {
     super(title);
