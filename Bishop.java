@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 class Bishop extends Piece {
 
+	public Bishop(Board b, Boolean t, Position p){
+		super(b, t, p);
+	}
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
         for (int i = 1; i<9; i++) {
