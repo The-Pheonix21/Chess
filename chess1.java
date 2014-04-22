@@ -13,34 +13,8 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
     Position oldpos;
     Board board;
     Boolean turn = true;
-    public chess1(String title)
-    {
-    board = new Board();
-    new King(board, 0, new Position(4, 0));
-    new King(board, 1, new Position(4, 7));
-    for (int i = 0; i<8; i++) {
-        new Pawn(board, 0, new Position(i, 1));
-    }
-    for (int i = 0; i<8; i++) {
-        new Pawn(board, 1, new Position(i, 6));
-    }
-    new Rook(board, 0, new Position(0,0));
-    new Rook(board, 0, new Position(7,0));
-    new Rook(board, 1, new Position(0,7));
-    new Rook(board, 1, new Position(7,7));
+    public chess1(String title){
 
-    new Knight(board, 0, new Position(1,0));
-    new Knight(board, 0, new Position(6,0));
-    new Knight(board, 1, new Position(1,7));
-    new Knight(board, 1, new Position(6,7));
-
-    new Bishop(board, 0, new Position(2,0));
-    new Bishop(board, 0, new Position(5,0));
-    new Bishop(board, 1, new Position(2,7));
-    new Bishop(board, 1, new Position(5,7));
-
-    new Queen(board, 0, new Position(3, 0));
-    new Queen(board, 0, new Position(3, 7));
 
     super(title);
     Dimension boardSize = new Dimension(800, 800);
@@ -161,6 +135,34 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
         piece = new JLabel(new ImageIcon("9.png"));
         panel = (JPanel)chessBoard.getComponent(63);
         panel.add(piece);
+        
+               
+      board = new Board();
+      new King(board, 0, new Position(4, 0));
+      new King(board, 1, new Position(4, 7));
+      for (int i = 0; i<8; i++) {
+        new Pawn(board, 0, new Position(i, 1));
+      }
+      for (int i = 0; i<8; i++) {
+        new Pawn(board, 1, new Position(i, 6));
+       }
+       new Rook(board, 0, new Position(0,0));
+       new Rook(board, 0, new Position(7,0));
+       new Rook(board, 1, new Position(0,7));
+       new Rook(board, 1, new Position(7,7));
+
+       new Knight(board, 0, new Position(1,0));
+       new Knight(board, 0, new Position(6,0));
+       new Knight(board, 1, new Position(1,7));
+       new Knight(board, 1, new Position(6,7));
+
+       new Bishop(board, 0, new Position(2,0));
+       new Bishop(board, 0, new Position(5,0));
+       new Bishop(board, 1, new Position(2,7));
+       new Bishop(board, 1, new Position(5,7));
+
+       new Queen(board, 0, new Position(3, 0));
+       new Queen(board, 0, new Position(3, 7));
 
     }
 
