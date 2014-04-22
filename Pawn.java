@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 class Pawn extends Piece{
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
