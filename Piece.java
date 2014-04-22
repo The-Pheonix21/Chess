@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-class Piece {
+public class Piece {
 	Position position;
 	Boolean team;
 	Board board;
