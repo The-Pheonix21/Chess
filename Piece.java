@@ -42,7 +42,7 @@ class Piece {
 		check.clear();
 		check.add(position());
 		check.add(p);
-		if (board.checkCheck(check)) {
+		if (board.checkCheck(check), super.team()) {
 			board.removeFromGird(p);
 			position = p;
 			return true;			
