@@ -12,7 +12,7 @@ class Piece {
 	Board board;
 	Image i;
 
-	ArrayList<Position> check = new ArrayList<position>();
+	ArrayList<Position> check = new ArrayList<Position>();
 
     public Piece(Board b, Boolean t, Position p){
         team = t;
