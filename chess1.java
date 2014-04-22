@@ -187,14 +187,14 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
      
     public void mouseReleased(MouseEvent me) {
         ArrayList<Position> pm = new ArrayList<Position>();
-        pm = board.getPiece(new Position(me.getX(), me.getY()).possibleMoves());
+        pm = board.getPiece(peanut(me.getX(), me.getY())).possibleMoves();
         Boolean brat = false;
         for (int i = 0; i < pm.size(); i++) {
             if (pm.get(i).equals(peanut(me.getX() + xAdjustment, me.getY() + yAdjustment))) {
                 brat = true;
             }
         }
-        if (brat && board.getPiece(peanut(me.getX(), me.getY())).moves()) {
+        if (brat && board.getPiece(peanut(me.getX(), me.getY())).move()) {
             if(chessPiece == null) return;
 
              chessPiece.setVisible(false);
