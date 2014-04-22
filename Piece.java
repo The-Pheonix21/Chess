@@ -5,7 +5,6 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-import java.ImageIO.ImageIO;
 
 class Piece {
 	Position position;
@@ -63,21 +62,6 @@ class Piece {
 		return board;
 	}
 
-	
-    public void loadImage(String name) {
-    	String path = null;
-    	Image image = null;
-
-    	try {
-    		path = "img" + File.separator + name + ".png";
-    		image = ImageIO.read(new File(path));
-    	} catch(IOException e){
-    		System.out.println("Could not load image at path: " + path);
-    		System.exit(1);
-    	}
-
-    	this.i = image;
-    }
 
 
 }
