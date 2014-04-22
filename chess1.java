@@ -138,31 +138,31 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
         
                
       board = new Board();
-      new King(board, 0, new Position(4, 0));
-      new King(board, 1, new Position(4, 7));
+      new King(board, false, new Position(4, 0));
+      new King(board, true, new Position(4, 7));
       for (int i = 0; i<8; i++) {
-        new Pawn(board, 0, new Position(i, 1));
+        new Pawn(board, false, new Position(i, 1));
       }
       for (int i = 0; i<8; i++) {
-        new Pawn(board, 1, new Position(i, 6));
+        new Pawn(board, true, new Position(i, 6));
        }
-       new Rook(board, 0, new Position(0,0));
-       new Rook(board, 0, new Position(7,0));
-       new Rook(board, 1, new Position(0,7));
-       new Rook(board, 1, new Position(7,7));
+       new Rook(board, false, new Position(0,0));
+       new Rook(board, false, new Position(7,0));
+       new Rook(board, true, new Position(0,7));
+       new Rook(board, true, new Position(7,7));
 
-       new Knight(board, 0, new Position(1,0));
-       new Knight(board, 0, new Position(6,0));
-       new Knight(board, 1, new Position(1,7));
-       new Knight(board, 1, new Position(6,7));
+       new Knight(board, false, new Position(1,0));
+       new Knight(board, false, new Position(6,0));
+       new Knight(board, true, new Position(1,7));
+       new Knight(board, true, new Position(6,7));
 
-       new Bishop(board, 0, new Position(2,0));
-       new Bishop(board, 0, new Position(5,0));
-       new Bishop(board, 1, new Position(2,7));
-       new Bishop(board, 1, new Position(5,7));
+       new Bishop(board, false, new Position(2,0));
+       new Bishop(board, false, new Position(5,0));
+       new Bishop(board, true, new Position(2,7));
+       new Bishop(board, true, new Position(5,7));
 
-       new Queen(board, 0, new Position(3, 0));
-       new Queen(board, 0, new Position(3, 7));
+       new Queen(board, false, new Position(3, 0));
+       new Queen(board, true, new Position(3, 7));
 
     }
 
