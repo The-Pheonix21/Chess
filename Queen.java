@@ -1,10 +1,6 @@
 import java.util.ArrayList;
 
 class Queen extends Piece {
-	
-	public Queen() {
-
-	}
 
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
