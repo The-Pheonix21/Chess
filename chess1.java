@@ -2,8 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class chess1 extends JFrame implements MouseListener, MouseMotionListener
- {
+public class chess1 extends JFrame implements MouseListener, MouseMotionListener{
+   
     JLayeredPane layeredPane;
     JPanel chessBoard;
     JLabel chessPiece;
@@ -227,12 +227,8 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
         frame.setLocationRelativeTo( null );
         frame.setVisible(true);
      }
-<<<<<<< HEAD
 
      public Position peanut(int x, int y) {
         return new Position(x / 100, y / 100);
      }
 }
-=======
-}
->>>>>>> 94eef7c7fa2971ed8e80b9c2604063c36e8d38f9
