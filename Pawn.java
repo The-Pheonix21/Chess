@@ -1,5 +1,10 @@
 import java.util.ArrayList;
  class Pawn extends Piece{
+ 	
+	public Pawn(Board b, Boolean t, Position p){
+		super(b, t, p);
+	}
+ 	
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
        
