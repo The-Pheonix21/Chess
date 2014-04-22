@@ -13,7 +13,7 @@ class Queen extends Piece {
         		      d.add(position);
                               scalar++;
                         }
-                        if (super.getPiece(position) != null && super.getPiece(position).team() == !super.team()) {
+                        if (super.getPiece(position) != null && super.board.getPiece(position).team() == !super.team()) {
                            d.add(position);     
                         }
         	}
