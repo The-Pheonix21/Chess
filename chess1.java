@@ -12,7 +12,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
     public chess1(String title)
     {
     super(title);
-    Dimension boardSize = new Dimension(800, 600);
+    Dimension boardSize = new Dimension(800, 800);
 
     layeredPane = new JLayeredPane();
     getContentPane().add(layeredPane);
@@ -154,20 +154,30 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
      }
      
     public void mouseReleased(MouseEvent e) {
-        if(chessPiece == null) return;
+        ArrayList<Position> pm = new ArrayList<Position>();
+        pm = board.getPiece(new Position(me.getX(), me.getY()).possibleMoves());
+        Boolean brat = false;
+        for (int i = 0; i < pm.size(); i++) {
+            if (pm.get(i).equals(peanut(me.getX() + xAdjustment, me.getY() + yAdjustment))) {
+                brat = true;
+            }
+        }
+        if (brat && board.getPiece(peanut(me.getX(), me.getY()).moves())) {
+            if(chessPiece == null) return;
 
-         chessPiece.setVisible(false);
-        Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
-        if (c instanceof JLabel){
-            Container parent = c.getParent();
-            parent.remove(0);
-            parent.add( chessPiece );
+             chessPiece.setVisible(false);
+            Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
+            if (c instanceof JLabel){
+                Container parent = c.getParent();
+                parent.remove(0);
+                parent.add( chessPiece );
+            }
+            else {
+                Container parent = (Container)c;
+                parent.add( chessPiece );
+            }
+            chessPiece.setVisible(true);
         }
-        else {
-            Container parent = (Container)c;
-            parent.add( chessPiece );
-        }
-        chessPiece.setVisible(true);
     }
     public void mouseClicked(MouseEvent e) {
   
@@ -187,5 +197,9 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
         frame.setResizable(true);
         frame.setLocationRelativeTo( null );
         frame.setVisible(true);
+     }
+
+     public Position peanut(int x, int y) {
+        return new Position(x / 100, y / 100);
      }
 }
