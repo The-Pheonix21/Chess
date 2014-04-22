@@ -185,7 +185,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
          chessPiece.setLocation(me.getX() + xAdjustment, me.getY() + yAdjustment);
      }
      
-    public void mouseReleased(MouseEvent e) {
+    public void mouseReleased(MouseEvent me) {
         ArrayList<Position> pm = new ArrayList<Position>();
         pm = board.getPiece(new Position(me.getX(), me.getY()).possibleMoves());
         Boolean brat = false;
@@ -198,7 +198,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
             if(chessPiece == null) return;
 
              chessPiece.setVisible(false);
-            Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
+            Component c =  chessBoard.findComponentAt(me.getX(), me.getY());
             if (c instanceof JLabel){
                 Container parent = c.getParent();
                 parent.remove(0);
