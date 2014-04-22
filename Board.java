@@ -30,7 +30,7 @@ class Board {
 		team = !team; 
 		exclude.add(possibleMove.get(0));
 		for (Piece p : pieces) {
-			if (p.team() == team && !(p.position().equals(possibleMove.get(1))) {
+			if (p.team() == team && !(p.position().equals(possibleMove.get(1)))) {
 				temp = p.possibleMoves();
 			}
 			for (Position d : temp ) {
