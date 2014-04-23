@@ -213,7 +213,6 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
                 parent.add( chessPiece );
             }
             chessPiece.setVisible(true);
-            turn = !turn;
         } else {
             chessPiece.setLocation(oldpos.x() * 100, oldpos.y() * 100);
         }
