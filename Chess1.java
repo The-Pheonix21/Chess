@@ -215,6 +215,12 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
             chessPiece.setVisible(true);
         } else {
             if(chessPiece == null) return;
+
+            chessPiece.setVisible(false);
+            Component c =  chessBoard.findComponentAt(oldpos.x() * 100, oldpos.y() * 100);
+            Container parent = (Container)c;
+            parent.add( chessPiece );
+            chessPiece.setVisible(true);
             chessPiece.setLocation(oldpos.x() * 100, oldpos.y() * 100);
         }
         if(chessPiece == null) return;
