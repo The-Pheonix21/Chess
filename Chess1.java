@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class chess1 extends JFrame implements MouseListener, MouseMotionListener{
+public class Chess1 extends JFrame implements MouseListener, MouseMotionListener{
    
     JLayeredPane layeredPane;
     JPanel chessBoard;
@@ -13,7 +13,7 @@ public class chess1 extends JFrame implements MouseListener, MouseMotionListener
     Position oldpos;
     Board board;
     Boolean turn = true;
-    public chess1(String title){
+    public Chess1(String title){
 
 
     super(title);
