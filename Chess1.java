@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.ArrayList;
+import java.io.*;
 
 public class Chess1 extends JFrame implements MouseListener, MouseMotionListener{
    
@@ -13,6 +14,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
     Position oldpos;
     Board board;
     Boolean turn = true;
+
     public Chess1(String title){
 
 
@@ -39,100 +41,100 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
      else
      square.setBackground( i % 2 == 0 ? Color.white : Color.black );
      }
-    JLabel piece = new JLabel( new ImageIcon("3.png") );
+    JLabel piece = new JLabel( new ImageIcon("img" + File.separator + "3.png") );
     JPanel panel = (JPanel)chessBoard.getComponent(0);
     panel.add(piece);
-    piece = new JLabel(new ImageIcon("5.png"));
+    piece = new JLabel(new ImageIcon("img" + File.separator + "5.png"));
     panel = (JPanel)chessBoard.getComponent(1);
     panel.add(piece);
-    piece = new JLabel(new ImageIcon("4.png"));
+    piece = new JLabel(new ImageIcon("img" + File.separator + "4.png"));
         panel = (JPanel)chessBoard.getComponent(2);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("1.jpg"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "1.jpg"));
         panel = (JPanel)chessBoard.getComponent(3);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("2.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "2.png"));
         panel = (JPanel)chessBoard.getComponent(4);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("4.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "4.png"));
         panel = (JPanel)chessBoard.getComponent(5);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("5.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "5.png"));
         panel = (JPanel)chessBoard.getComponent(6);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("3.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "3.png"));
         panel = (JPanel)chessBoard.getComponent(7);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(8);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(9);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(10);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(11);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(12);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(13);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(14);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("6.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "6.png"));
         panel = (JPanel)chessBoard.getComponent(15);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(48);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(49);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(50);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(51);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(52);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(53);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(54);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("12.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "12.png"));
         panel = (JPanel)chessBoard.getComponent(55);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("9.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "9.png"));
         panel = (JPanel)chessBoard.getComponent(56);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("11.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "11.png"));
         panel = (JPanel)chessBoard.getComponent(57);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("10.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "10.png"));
         panel = (JPanel)chessBoard.getComponent(58);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("7.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "7.png"));
         panel = (JPanel)chessBoard.getComponent(59);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("8.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "8.png"));
         panel = (JPanel)chessBoard.getComponent(60);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("10.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "10.png"));
         panel = (JPanel)chessBoard.getComponent(61);
         panel.add(piece);        
-        piece = new JLabel(new ImageIcon("11.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "11.png"));
         panel = (JPanel)chessBoard.getComponent(62);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("9.png"));
+        piece = new JLabel(new ImageIcon("img" + File.separator + "9.png"));
         panel = (JPanel)chessBoard.getComponent(63);
         panel.add(piece);
         
@@ -164,6 +166,10 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
        new Queen(board, false, new Position(3, 0));
        new Queen(board, true, new Position(3, 7));
 
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
     }
 
     public void mousePressed(MouseEvent e)
@@ -206,7 +212,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
             if (c instanceof JLabel){
                 Container parent = c.getParent();
                 parent.remove(0);
-                parent.add( chessPiece );
+                parent.add(chessPiece);
             }
             else {
                 Container parent = (Container)c;
@@ -235,7 +241,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE );
         frame.pack();
         frame.setResizable(true);
-        frame.setLocationRelativeTo( null );
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
      }
 
