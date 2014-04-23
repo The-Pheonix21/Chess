@@ -19,9 +19,9 @@ import java.util.ArrayList;
         d.add(new Position(super.position.x() - 2, super.position.y() -1));
         d.add(new Position(super.position.x() - 1, super.position.y() -2));
 
-        for (Position p : d) {
-        	if (super.board.getPiece(p) != null && super.board.getPiece(p).team() == super.team()) {
-        		d.remove(d.indexOf(p));
+        for (int i = 7; i>=0; i--) {
+        	if (super.board.getPiece(d.get(i)) != null && super.board.getPiece(d.get(i)).team() == super.team()) {
+        		d.remove(i);
         	}
         }
 
