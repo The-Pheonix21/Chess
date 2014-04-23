@@ -231,7 +231,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
   
     }
     public static void main(String[] args) {
-        JFrame frame = new chess1("Chess Board");
+        JFrame frame = new Chess1("Chess Board");
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE );
         frame.pack();
         frame.setResizable(true);
