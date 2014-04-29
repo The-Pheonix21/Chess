@@ -11,6 +11,7 @@ public class Piece {
 	Boolean team;
 	Board board;
 	Image i;
+	Boolean firstMove = true;
 
 	ArrayList<Position> check = new ArrayList<Position>();
 
@@ -38,7 +39,12 @@ public class Piece {
 
 		board.removeFromGird(p);
 		position = p;
+		firstMove = false;
 		return true;	
+	}
+	
+	public Boolean firstMove(){
+		return firstMove;
 	}
 
 	public Position position(){
