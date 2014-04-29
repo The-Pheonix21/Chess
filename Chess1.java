@@ -199,6 +199,9 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
     public void mouseReleased(MouseEvent me) {
         ArrayList<Position> pm = new ArrayList<Position>();
         pm = board.getPiece(  oldpos ).possibleMoves();
+        if(pm.size()==0){
+            System.out.println("pos pos fail");           
+        }
         Position newpos = peanut(me.getX(), me.getY());
         System.out.println("(" + newpos.x() + "," + newpos.y()+")");
         Boolean brat = false;
