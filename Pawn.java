@@ -7,9 +7,9 @@ import java.util.ArrayList;
  	
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
-        int tea = -1;
+        int tea = 1;
         if(super.team()){
-        	tea = 1;
+        	tea = -1;
         }
        
         for (int i = 0; i<3; i++) {
