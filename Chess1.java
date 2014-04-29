@@ -203,11 +203,11 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
         System.out.println("(" + newpos.x() + "," + newpos.y()+")");
         Boolean brat = false;
         for (int i = 0; i < pm.size(); i++) {
-            if (pm.get(i).equals()) {
+            if (pm.get(i).equals(newpos)) {
                 brat = true;
             }
         }
-        if (brat && board.getPiece(  oldpos ).move(peanut(me.getX(), me.getY()))) {
+        if (brat && board.getPiece(  oldpos ).move(newpos)) {
             if(chessPiece == null) return;
 
              chessPiece.setVisible(false);
