@@ -7,11 +7,15 @@ import java.util.ArrayList;
  	
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
+        int tea = -1;
+        if(super.team()){
+        	tea = 1;
+        }
        
         for (int i = 0; i<3; i++) {
         	
         	
-        	Position temp = new Position(super.position.x() - 1 + i, super.position.y() + 1 * super.team());
+        	Position temp = new Position(super.position.x() - 1 + i, super.position.y() + (1 * tea));
 			
             if(temp.x() >= 0 && temp.x()<=7 && temp.y() >= 0  && temp.y()<=7){
             	if (temp.x() == position.x() && super.board.getPiece(temp) == null) {
