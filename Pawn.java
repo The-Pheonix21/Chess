@@ -32,7 +32,6 @@ import java.util.ArrayList;
         		d.add(temp);
         	}
         }
-        }
         return d;
 	}
 }
