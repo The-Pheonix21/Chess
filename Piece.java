@@ -42,6 +42,7 @@ public class Piece {
 		check.clear();
 		check.add(position());
 		check.add(p);
+		System.out.println("move called"); 
 		if (board.checkCheck(check, team())) {
 			board.removeFromGird(p);
 			position = p;
