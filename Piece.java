@@ -21,21 +21,10 @@ public class Piece {
         board.addToGrid(this);
     }
 
-    public Piece(Board b, Boolean t, Position p, Image i){
-        team = t;
-        position = p;
-        board = b;
-        this.i = i;
-    }
-
 	public ArrayList<Position> possibleMoves(){
         ArrayList<Position> d = new ArrayList<Position>();
         d.add(position);
         return d;
-	}
-
-	public void removeFromGrid(){
-		position = new Position(-1, -9);
 	}
 
 	public Boolean move(Position p){
