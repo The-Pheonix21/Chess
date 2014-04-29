@@ -11,7 +11,7 @@ import java.util.ArrayList;
         for (int i = 0; i<3; i++) {
         	
         	
-        	Position temp = new Position(super.position.x() - 1 + i, super.position.y() + 1);
+        	Position temp = new Position(super.position.x() - 1 + i, super.position.y() + 1 * super.team());
 			
             if(temp.x() >= 0 && temp.x()<=7 && temp.y() >= 0  && temp.y()<=7){
             	if (temp.x() == position.x() && super.board.getPiece(temp) == null) {
