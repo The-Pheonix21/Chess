@@ -26,6 +26,13 @@ import java.util.ArrayList;
             	}
             }
         }
+        if(super.firstMove()){
+        	Position temp = new Position(super.position.x(), super.position.y() + (2*tea));
+        	if(super.board.getPiece(temp) == null){
+        		d.add(temp);
+        	}
+        }
+        }
         return d;
 	}
 }
