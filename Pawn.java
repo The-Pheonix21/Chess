@@ -20,8 +20,7 @@ import java.util.ArrayList;
             if(temp.x() >= 0 && temp.x()<=7 && temp.y() >= 0  && temp.y()<=7){
             	if (temp.x() == position.x() && super.board.getPiece(temp) == null) {
             		d.add(temp);
-            	}
-            	if(super.board.getPiece(temp) != null && super.board.getPiece(temp).team() == !super.team()){
+            	}else if(super.board.getPiece(temp) != null && super.board.getPiece(temp).team() == !super.team()){
             		d.add(temp);
             	}
             }
