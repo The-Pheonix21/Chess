@@ -44,11 +44,12 @@ public class Piece {
 		check.add(p);
 		System.out.println("move called"); 
 		if (board.checkCheck(check, team())) {
-			board.removeFromGird(p);
-			position = p;
-			return true;			
+			return false;
 		}
-		return false;
+
+		board.removeFromGird(p);
+		position = p;
+		return true;	
 	}
 
 	public Position position(){
