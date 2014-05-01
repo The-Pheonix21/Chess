@@ -12,10 +12,10 @@ class Board {
 			returnPiece = true;
 			if(pi.position().equals(p)){
 				if(exclude.size() > 1){
-					if(exclude.get(0).equals(p)){
+					if(exclude.get(1).equals(p)){
 						returnPiece = false;
 					}
-					if(exclude.get(1).equals(p)){
+					if(exclude.get(0).equals(p)){
 						System.out.println("ofEight");
 						return ofEight;
 					}
