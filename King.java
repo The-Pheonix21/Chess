@@ -12,7 +12,9 @@ class King extends Piece {
         	for (int j = -1; j <= 1; j++) {
                         Position position = new Position(super.position().x() + i, super.position().y() + j);
         		if (position().x() + i <= 8 && position().y() + j <= 8  && position.x() + i >= 0 && position.y() + j >= 0 && (super.board.getPiece(position) == null || super.board.getPiece(position).team() == !super.team()))
-        			d.add(position);
+        			if(position != super.postion()){
+        			      d.add(position);
+        			}
         	}
         }
         return d;
