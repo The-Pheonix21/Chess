@@ -10,20 +10,20 @@ class Board {
 		boolean returnPiece;
 		for (Piece pi : pieces) {
 			returnPiece = true;
-			if(pi.position().equals(p) && exclude.size() > 0){
-				
-				if(exclude.get(1).equals(p)){
-					returnPiece = false;
-				}else if(exclude.get(2).equals(p)){
-					return ofEight;
+			if(pi.position().equals(p)){
+				if(exclude.size() > 0){
+					if(exclude.get(1).equals(p)){
+						returnPiece = false;
+					}else if(exclude.get(2).equals(p)){
+						return ofEight;
+					}
 				}
-				
-				
+	   	   		if (returnPiece) {
+					return pi;
+				}				
 			}
 		}
-		if (returnPiece) {
-			return pi;
-		}		
+		
 		return null;
 
 	}
