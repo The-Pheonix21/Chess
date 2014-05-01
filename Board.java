@@ -13,7 +13,7 @@ class Board {
 			if(pi.position().equals(p)){
 				if(exclude.get(1).equals(p)){
 					returnPiece = false;
-				}else if(exclude.get(2).equals(p){
+				}else if(exclude.get(2).equals(p)){
 					return ofEight;
 				}
 				
