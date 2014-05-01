@@ -10,15 +10,20 @@ class Queen extends Piece {
         d.add(super.position());
         for (int i = -1; i <= 1; i++) {
         	for (int j = -1; j <= 1; j++) {
+                if (i == 0 && j == 0) {
+                    j++;
+                }
         		int scalar = 1;
                 Position position = new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar));
-        		while (super.position().x() + (i * scalar) <= 8 && super.position().y() + (j * scalar) <= 8 && super.position().x() + (i * scalar) >= 0 && super.position().y() + (j * scalar) >= 0 && super.board.getPiece(position) == null) {
+        		while (position.x() <= 7 && position.y() <= 7 && position.x() >= 0 && position.y() >= 0 && super.board.getPiece(position) == null) {
+                    System.out.println("(" + position.x() + "," + position.y() + ")");
         		      d.add(position);
-                              scalar++;
-                        }
-                        if (super.board.getPiece(position) != null && super.board.getPiece(position).team() == !super.team()) {
-                           d.add(position);     
-                        }
+                    scalar++;
+                    position = new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar));
+                }
+                if (super.board.getPiece(position) != null && super.board.getPiece(position).team() == !super.team()) {
+                   d.add(position);     
+                }
         	}
         }
         return d;
