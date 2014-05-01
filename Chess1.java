@@ -174,10 +174,10 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
 
     public void mousePressed(MouseEvent e)
     {
-        if (turn) {
+            oldpos = peanut(e.getX(), e.getY());
               chessPiece = null;
             Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
-             if (c instanceof JPanel) 
+             if (c instanceof JPanel || board.get(oldpos).team == turn)
              return;
              Point parentLocation = c.getParent().getLocation();
             xAdjustment = parentLocation.x - e.getX();
@@ -186,9 +186,8 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
             chessPiece.setLocation(e.getX() + xAdjustment, e.getY() + yAdjustment);
             chessPiece.setSize(chessPiece.getWidth(), chessPiece.getHeight());
             layeredPane.add(chessPiece, JLayeredPane.DRAG_LAYER);
-            oldpos = peanut(e.getX(), e.getY());
+            
             System.out.println("(" + oldpos.x() + "," + oldpos.y()+")");
-        }
     }
    
     public void mouseDragged(MouseEvent me) {
@@ -226,6 +225,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
                 parent.add( chessPiece );
             }
             chessPiece.setVisible(true);
+            turn = !turn;
         } else {
             if(chessPiece == null) return;
 
