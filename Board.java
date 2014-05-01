@@ -27,7 +27,7 @@ class Board {
 	}
 
 	public boolean checkCheck(ArrayList<Position> possibleMove, boolean team){
-		ofEight = getPiece(possibleMove.get(o));
+		ofEight = getPiece(possibleMove.get(0));
 		ArrayList<Position> allPossibleMoves = new ArrayList<Position>();
 		ArrayList<Position> temp = new ArrayList<Position>();
 		team = !team; 
