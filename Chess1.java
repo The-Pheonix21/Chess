@@ -210,7 +210,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
                 System.out.println("we have a match"); 
             }
         }
-        if (brat && board.getPiece(  oldpos ).move(newpos)) {
+        if (board.getPiece(oldpos).team() != turn || (brat && board.getPiece(  oldpos ).move(newpos))) {
             if(chessPiece == null) return;
 
              chessPiece.setVisible(false);
