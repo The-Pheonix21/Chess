@@ -37,15 +37,16 @@ class Board {
 				allPossibleMoves.add(d);
 			}
 		}
+		System.out.println("all positions colected");
 		exclude.clear();
 		for (Position p : allPossibleMoves) {
 			for (Piece king : kings) {
 				if(king.team() == team && king.position().equals(p)){
-					return false;
+					return true;
 				}
 			}
 		}
-		return true; 	
+		return false; 	
 	}
 
 	public boolean removeFromGird(Position p){
