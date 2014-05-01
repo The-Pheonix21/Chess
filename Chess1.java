@@ -177,7 +177,7 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
             oldpos = peanut(e.getX(), e.getY());
             chessPiece = null;
             Component c =  chessBoard.findComponentAt(e.getX(), e.getY());
-            if (c instanceof JPanel || board.get(oldpos).team() == turn)
+            if (c instanceof JPanel || board.getPiece(oldpos).team() == turn)
              return;
             Point parentLocation = c.getParent().getLocation();
             xAdjustment = parentLocation.x - e.getX();
