@@ -15,7 +15,7 @@ class Queen extends Piece {
         		int scalar = 1;
                 Position position = new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar));
         		while (position.x() <= 7 && position.y() <= 7 && position.x() >= 0 && position.y() >= 0 && super.board.getPiece(position) == null) {
-                                if(position != super.postion()){
+                                if(!position.equals(super.postion())){
         			      d.add(position);
         			}
         		    
@@ -23,7 +23,7 @@ class Queen extends Piece {
                     position = new Position(super.position().x() + (i * scalar), super.position().y() + (j * scalar));
                 }
                 if (super.board.getPiece(position) != null && super.board.getPiece(position).team() == !super.team()) {
-                        if(position != super.postion()){
+                        if(!position.equals(super.postion())){
         			      d.add(position);
         		}
                
