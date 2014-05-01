@@ -4,17 +4,19 @@ class Board {
 	ArrayList<Piece> pieces = new ArrayList<Piece>();
 	ArrayList<Piece> kings = new ArrayList<Piece>();
 	ArrayList<Position> exclude = new ArrayList<Position>();
+	Piece ofEight;
 
 	public Piece getPiece(Position p){
 		boolean returnPiece;
 		for (Piece pi : pieces) {
 			returnPiece = true;
 			if(pi.position().equals(p)){
-				for (int i = 0; i<exclude.size(); i++) {
-					if(exclude.get(i).equals(p)){
-						returnPiece = false;
-					}
+				if(exclude.get(1).equals(p)){
+					returnPiece = false;
+				}else if(exclude.get(2).equals(p){
+					return ofEight;
 				}
+				
 				if (returnPiece) {
 					return pi;
 				}				
@@ -25,10 +27,12 @@ class Board {
 	}
 
 	public boolean checkCheck(ArrayList<Position> possibleMove, boolean team){
+		ofEight = getPiece(possibleMove(o));
 		ArrayList<Position> allPossibleMoves = new ArrayList<Position>();
 		ArrayList<Position> temp = new ArrayList<Position>();
 		team = !team; 
 		exclude.add(possibleMove.get(0));
+		exclude.add(possibleMove.get(1));
 		for (Piece p : pieces) {
 			if (p.team() == team && !(p.position().equals(possibleMove.get(1)))) {
 				temp = p.possibleMoves();
