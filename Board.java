@@ -41,12 +41,12 @@ class Board {
 		exclude.clear();
 		for (Position p : allPossibleMoves) {
 			for (Piece king : kings) {
-				if(king.team() == team && king.position().equals(p)){
-					return true;
+				if(king.team() != team && king.position().equals(p)){
+					return false;
 				}
 			}
 		}
-		return false; 	
+		return true; 	
 	}
 
 	public boolean removeFromGird(Position p){
