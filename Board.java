@@ -14,6 +14,7 @@ class Board {
 				if(exclude.size() > 1){
 					if(exclude.get(0).equals(p)){
 						returnPiece = false;
+					}
 					if(exclude.get(1).equals(p)){
 						System.out.println("ofEight");
 						return ofEight;
