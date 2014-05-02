@@ -50,10 +50,10 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
     piece = new JLabel(new ImageIcon("4.png"));
         panel = (JPanel)chessBoard.getComponent(2);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("1.jpg"));
+        piece = new JLabel(new ImageIcon("2.png"));
         panel = (JPanel)chessBoard.getComponent(3);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("2.png"));
+        piece = new JLabel(new ImageIcon("1.jpg"));
         panel = (JPanel)chessBoard.getComponent(4);
         panel.add(piece);
         piece = new JLabel(new ImageIcon("4.png"));
@@ -122,10 +122,10 @@ public class Chess1 extends JFrame implements MouseListener, MouseMotionListener
         piece = new JLabel(new ImageIcon("10.png"));
         panel = (JPanel)chessBoard.getComponent(58);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("7.png"));
+        piece = new JLabel(new ImageIcon("8.png"));
         panel = (JPanel)chessBoard.getComponent(59);
         panel.add(piece);
-        piece = new JLabel(new ImageIcon("8.png"));
+        piece = new JLabel(new ImageIcon("7.png"));
         panel = (JPanel)chessBoard.getComponent(60);
         panel.add(piece);
         piece = new JLabel(new ImageIcon("10.png"));
