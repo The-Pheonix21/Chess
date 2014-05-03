@@ -28,11 +28,7 @@ public class Piece {
         return d;
 	}
 
-	public Position moveTo(Position p) {
-		Position temp = this.position;
-		position = p;
-		return temp;
-	}
+
 
 	public Boolean move(Position p){
 		check.clear();
