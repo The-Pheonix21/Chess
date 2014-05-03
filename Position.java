@@ -28,4 +28,8 @@ class Position {
 		return p.x() == this.x && p.y() == this.y;
 	}
 
+	public void print() {
+		System.out.println("(" + this.x + "," + this.y + ")");
+	}
+
 }
