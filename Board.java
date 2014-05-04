@@ -11,7 +11,6 @@ class Board {
 		for (Piece pi : pieces) {
 			returnPiece = true;
 			if(pi.position().equals(p)){
-				System.out.println("Size: " + exclude.size());
 				if(exclude.size() > 1){
 					if(exclude.get(0).equals(p)){
 						returnPiece = false;
@@ -32,7 +31,6 @@ class Board {
 	}
 
 	public boolean checkCheck(ArrayList<Position> possibleMove, boolean team){
-		System.out.println("Sizeery: " + exclude.size());
 		ofEight = getPiece(possibleMove.get(0));
 		if(ofEight == null){
 			System.out.println("Broken");
