@@ -9,9 +9,9 @@ class Board {
 	public Piece getPiece(Position p){
 		boolean returnPiece;
 		if(pi.position().equals(p) && exclude.get(1).equals(p)){
- -			System.out.println("ofEight");
- -			return ofEight;
- -		}
+ 			System.out.println("ofEight");
+ 			return ofEight;
+ 		}
 		for (Piece pi : pieces) {
 			returnPiece = true;
 			if(pi.position().equals(p)){
