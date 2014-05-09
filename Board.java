@@ -8,7 +8,7 @@ class Board {
 
 	public Piece getPiece(Position p){
 		boolean returnPiece;
-		if(pi.position().equals(p) && exclude.get(1).equals(p)){
+		if(exclude.size() == 2 && exclude.get(1).equals(p)){
  			System.out.println("ofEight");
  			return ofEight;
  		}
