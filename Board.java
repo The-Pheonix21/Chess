@@ -52,6 +52,9 @@ class Board {
 
 		for (Position p : allPossibleMoves) {
 			for (Piece king : kings) {
+				if(p.equals(exclude.get(1)) king.position().equals(exclude.get(0))){
+					return true;
+				}
 				if(king.team() != team && king.position().equals(p) && !p.equals(exclude.get(0))){
 					return true;
 				}
