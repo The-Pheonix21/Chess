@@ -49,14 +49,16 @@ class Board {
 			}
 		}
 		System.out.println("all positions colected");
-		exclude.clear();
+
 		for (Position p : allPossibleMoves) {
 			for (Piece king : kings) {
-				if(king.team() != team && getPiece(king.position().equals(p)) == king){
+				if(king.team() != team && king.position().equals(p) && !king.position().equals(exclude.get(0))){
 					return true;
 				}
 			}
 		}
+		
+		exclude.clear();
 		return false; 	
 	}
 
